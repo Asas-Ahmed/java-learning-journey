@@ -1,43 +1,86 @@
 
 ---
 
-# 🫀 Anatomy of a Java Program
+# Anatomy of a Java Program
 
 ---
 
-- Smallest building block in java programs are functions
-  - A block of code that performs a task
+* **Class** → Container for related methods and variables (organizes code).
 
 ```java
-ReturnType Name() {
+public class Person {
     ...
 }
 ```
-> **Note:** Here returnType is **void**; Name() for example sendEmail(); (...) here we can write parameters to pass values to our function (who is the receiver, subject of the email); {...} is where we write java code.
 
-- Java program should have at least one function and that function is called **main**; it is the entry point of the program.
-
-- It belong to the class. **Class** is a container for one or more related functions. basically we use these classes to organize our code.
+* **Object** → Instance of a class.
 
 ```java
-class Main {
-    void main() {
-        ...
-    }
+Person p = new Person(); // creates an object of class Person
+```
+
+* Think of a class as a **blueprint**, and the object as a **real house built from that blueprint**.
+
+- **Field / Attribute / Property** → Variables that belong to a class or object.
+
+```java
+public class Person {
+    String name; // field
+    int age;     // field
 }
 ```
 
-- A **method** is a function that is part of a class. When a function belongs to a class we refer to it as a **method of that class**.
-  
-- All these classes and methods should have an **access modifier** an access modifier is a special keyword that determines if other classes and methods in this program can access these classes and methods we have various access modifiers like public, private...
+* **Method / Function** → Block of code that performs a task.
+
+```java
+void sayHello() {
+    System.out.println("Hello!");
+}
+```
+
+* **Method vs Function** → In Java, functions inside a class are called **methods**.
+
+- **Constructor** → Special method used to create and initialize objects.
+
+```java
+public Person(String name, int age) {
+    this.name = name;
+    this.age = age;
+}
+```
+
+* **main Method** → Entry point of every Java program.
 
 ```java
 public class Main {
-    public void main() {
+    public static void main(String[] args) {
         ...
     }
 }
 ```
 
-- PascalNamingConvention - **Classes**
-- camelNamingConvention - **Methods**
+* **Access Modifiers** → Control visibility of classes, fields, and methods.
+
+  * `public` → Accessible everywhere
+  * `private` → Accessible only inside the class
+  * `protected` → Accessible in the same package or subclasses
+
+* **Static vs Instance**
+
+  * `static` → Belongs to the **class**, shared by all objects
+  * Non-static → Belongs to **individual objects**
+
+* **Naming Conventions**:
+
+  * `PascalCase` → Classes (`MainClass`)
+  * `camelCase` → Methods and variables (`sendEmail`, `age`)
+
+---
+
+✅ **Extra Tips:**
+
+* Always keep **fields private** and access them via **getter/setter methods** for safety.
+
+* Objects let you **reuse code** and model real-world entities.
+
+---
