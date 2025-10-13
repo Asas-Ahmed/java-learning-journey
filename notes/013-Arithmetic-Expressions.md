@@ -1,67 +1,66 @@
 
 ---
 
-# Arithmetic Expressions
+# 📝 Java Arithmetic Expressions
 
 ---
 
-- Perform mathematical operations using operators:
-    
-    ```+```  (add), ```-```(subtract), ```*``` (multiply), ```/``` (divide), ```%``` (modulus/remainder)
+Arithmetic expressions perform mathematical operations.
 
-- Integer division gives integer result; cast to ```double``` for decimals.
+### 1\. Basic Operators
 
-- Use parentheses ```()``` to control operation order.
+| Operator | Operation | Note |
+| :--- | :--- | :--- |
+| **`+`** | Addition | |
+| **`-`** | Subtraction | |
+| **`*`** | Multiplication | |
+| **`/`** | Division | **Integer division** truncates decimals. Use **casting** (`(double)`) for a decimal result. |
+| **`%`** | Modulus | Returns the **remainder** of a division. |
+
+-----
+
+### 2\. Full Code Example
+
+This code demonstrates standard arithmetic, increment, and compound assignment operators.
 
 ```java
 public class Main {
 
     public static void main(String[] args) {
-        // =========================
-        // Arithmetic Operations
-        // =========================
-        int addition = 10 + 3;          // Addition
-        int subtraction = 10 - 3;       // Subtraction
-        int multiplication = 10 * 3;    // Multiplication
-        double division = (double)10 / (double)3; // Division (cast to double for decimal result)
-        int modulusReminder = 10 % 3;   // Modulus (remainder)
+        // --- Arithmetic Operations ---
+        int addition = 10 + 3;
+        double division = (double)10 / 3; // Cast one number for decimal result
+        int modulus = 10 % 3; 
 
-        // =========================
-        // Increment Operations
-        // =========================
+        // --- Increment Operations ---
         int a = 1;
-        int b = ++a;    // Pre-increment: a is incremented before assignment
+        int b = ++a;    // Pre-increment: 'a' becomes 2, then 'b' gets 2.
 
         int x = 1;
-        int y = x++;    // Post-increment: x is assigned first, then incremented
+        int y = x++;    // Post-increment: 'y' gets 1, then 'x' becomes 2.
 
-        // =========================
-        // Compound Assignment
-        // =========================
+        // --- Compound Assignment ---
         int z = 1;
         z += 2;         // Equivalent to z = z + 2
-        System.out.println(z);  // Prints 3
-
-        // =========================
-        // Print Arithmetic Results
-        // =========================
-        System.out.println(addition);       // 13
-        System.out.println(subtraction);    // 7
-        System.out.println(multiplication); // 30
-        System.out.println(division);       // 3.3333333333333335
-        System.out.println(modulusReminder);// 1
-
-        // =========================
-        // Print Increment Results
-        // =========================
-        System.out.println(a);  // 2
-        System.out.println(b);  // 2
-
-        System.out.println(x);  // 2
-        System.out.println(y);  // 1
+        
+        // --- Print Results ---
+        System.out.println(z);
+        System.out.println(addition); 
+        System.out.println(10 - 3); 
+        System.out.println(10 * 3); 
+        System.out.println(division);
+        System.out.println(modulus);
+        
+        System.out.println(a); 
+        System.out.println(b); 
+        System.out.println(x); 
+        System.out.println(y);
     }
 }
 ```
+
+### Output
+
 ```
 3
 13
@@ -74,3 +73,13 @@ public class Main {
 2
 1
 ```
+
+-----
+
+### 3\. Quick Operators Summary
+
+| Type | Operator | Example | Equivalent To |
+| :--- | :--- | :--- | :--- |
+| **Compound** | `+=` | `z += 2` | `z = z + 2` |
+| **Pre-Increment** | `++a` | `++a` | Increments **before** using the value. |
+| **Post-Increment** | `a++` | `a++` | Increments **after** using the value. |

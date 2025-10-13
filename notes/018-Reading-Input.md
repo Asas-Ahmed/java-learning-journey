@@ -1,25 +1,32 @@
 
 ---
 
-# Reading Input in Java
+# 📝 Reading Input in Java (The `Scanner` Class)
 
 ---
 
-* **Step 1:** Import Scanner
+The **`Scanner`** class is used to read input from the console.
+
+### Setup Steps
+
+**Step 1: Import the Class**
 
 ```java
 import java.util.Scanner;
 ```
 
-* **Step 2:** Create Scanner object
+**Step 2: Create the Scanner Object**
+You only need to create **one** `Scanner` object per program.
 
 ```java
 Scanner scanner = new Scanner(System.in);
 ```
 
----
+-----
 
-### 1️⃣ Reading Numbers
+### 1\. Reading Numbers
+
+Use specific methods for different numeric types.
 
 ```java
 System.out.print("Age: ");
@@ -27,44 +34,23 @@ byte age = scanner.nextByte();
 System.out.println("You are " + age);
 ```
 
-* Use `.nextByte()`, `.nextInt()`, `.nextDouble()` for numeric input.
+**Methods:**
 
----
+  * `.nextByte()`, `.nextInt()`, `.nextDouble()`, etc.
 
-### 2️⃣ Reading Words
+-----
 
-```java
-System.out.print("Name: ");
-String name = scanner.next();
-System.out.println("You are " + name);
-```
+### 2\. Reading Text
 
-* `.next()` → reads **one word** only (stops at space).
+| Method | Purpose | Code Example | Note |
+| :--- | :--- | :--- | :--- |
+| **`.next()`** | Reads a **single word**. | `String name = scanner.next();` | Stops reading at the first space. |
+| **`.nextLine()`** | Reads a **full line** of text. | `String name = scanner.nextLine();` | Reads all characters, including spaces. |
 
----
-
-### 3️⃣ Reading Full Lines
+**Example: Reading a Full Line**
 
 ```java
 System.out.print("Full Name: ");
-String name = scanner.nextLine();
+String name = scanner.nextLine().trim(); // Use .trim() to remove extra spaces
 System.out.println("You are " + name);
 ```
-
-* `.nextLine()` → reads **whole line**, including spaces.
-
-* Remove extra spaces with `.trim()`:
-
-```java
-String name = scanner.nextLine().trim();
-```
-
----
-
-✅ Key Tips:
-
-* Always create **one Scanner object** per program: `Scanner scanner = new Scanner(System.in);`
-
-* Use `.next()` for a single word, `.nextLine()` for a full line.
-
-* `.trim()` removes unwanted spaces at start/end.
