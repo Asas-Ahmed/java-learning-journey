@@ -76,10 +76,17 @@ This repo contains:
 40. [Methods in Java](notes/032-Methods-in-Java.md)
 41. [Method Overloading in Java](notes/033-Method-Overloading.md)
 42. [Static Variables in Java](notes/043-Static-Variables.md)
+43. [Static Methods in Java](notes/044-Static-Methods.md)
+44. [Static Block in Java](notes/045-Static-Block.md)
+45. [Encapsulation in Java](notes/046-Encapsulation.md)
+46. [Getters and Setters in Java](notes/047-Getters-and-Setters.md)
+47. [The `this` Keyword in Java](notes/048-this-Keyword.md)
+48. [Constructor in Java](notes/049-Constructor.md)
+49. [Default vs Parameterized Constructor in Java](notes/050-Default-vs-Parameterized-Constructor.md)
 
 ### 🧠 Advanced Memory Concepts
 
-43. [Java Memory: Stack vs. Heap](notes/034-Stack-vs-Heap.md)
+50. [Java Memory: Stack vs. Heap](notes/034-Stack-vs-Heap.md)
 
 ---
 
